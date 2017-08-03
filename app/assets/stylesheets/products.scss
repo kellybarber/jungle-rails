@@ -51,6 +51,23 @@ main section.categories-show {
         font-size: 0.8em;
       }
 
+      aside.sold-out {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 10px;
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 20px;
+        background-color: #f28e8e;
+
+        p {
+          margin: 0;
+          font-size: 1.2em;
+          color: white;
+        }
+
+      }
+
       &:hover {
 
         border-color: #999;
@@ -72,5 +89,3 @@ main section.products-show {
     }
   }
 }
-
-
