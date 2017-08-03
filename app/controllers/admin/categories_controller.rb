@@ -9,8 +9,6 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def create
-    # render plain: params[:category].inspect
-
     @category = Category.new(category_params)
 
     if @category.save
