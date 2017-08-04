@@ -1,0 +1,21 @@
+
+Thank You for your Puchase at Jungle.com!
+=========================================
+
+Your purchase was successful and your
+order number is: <%= @order.id %>.
+
+<% @order_total = 0 %>
+<% @order.line_items.each do |item| %>
+<% item_total = item.product.price * item.quantity %>
+<% @order_total += item_total %>
+-----------------------------------------
+Name: <%= item.product.name %>
+Unit Price: <%= item.product.price %>
+No. Items <%= item.quantity %>
+Total Price: <%= item_total %>
+-----------------------------------------
+<% end %>
+Order Total: <%= @order_total %>
+-----------------------------------------
+Thanks for shopping and have a great day!
