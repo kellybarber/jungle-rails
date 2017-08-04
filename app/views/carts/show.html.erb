@@ -4,6 +4,12 @@
     <h1>My Cart</h1>
   </header>
 
+  <% if cart.size == 0 %>
+    <div class='jumbotron'>
+      <h4>Your Cart is Empty!</h4>
+      <%= link_to 'Keep Shopping', [:root], class: 'btn btn-info' %>
+    </div>
+  <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -49,5 +55,5 @@
       <% end %>
     </div>
   </div>
-
+  <% end %>
 </section>
