@@ -31,15 +31,19 @@
 </section>
 
 <section class="ratings">
+<% if current_user %>
+
   <h4>Write a Review:</h4>
   <%= render 'reviews/form' %>
 
-  <h2>Reviews</h2>
-  <% @product.reviews.each do |review| %>
-    <p>----------------------------------------------------------------------------------------------------------</p>
-    <p>=> <%= review.rating %>/5</p>
-    <p>=> <%= review.description %></p>
-    <p>----------------------------------------------------------------------------------------------------------</p>
-  <% end %>
+<% else %>
+  <h4>Please Log In to Write a Review</h4>
+  <%= link_to "Log In", new_session_path, class: 'btn btn-lg btn-primary' %>
 
+<% end %>
+
+<h2>Reviews</h2>
+<% @product.reviews.each do |review| %>
+  <%= render 'reviews/review', review: review %>
+<% end %>
 </section>
