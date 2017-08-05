@@ -21,6 +21,9 @@ end
 
 # Let's do this ...
 
+# Destroy line_items
+LineItem.destroy_all
+
 ## CATEGORIES
 
 puts "Finding or Creating Categories ..."
@@ -132,5 +135,67 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+
+## USERS
+
+puts "Re-creating Users ..."
+
+User.destroy_all
+
+User.create({
+  first_name: "Joey",
+  last_name: "Tribbiani",
+  email: "Joey@friends.com",
+  password_digest: "3jakseha4hr92euif23"
+})
+
+User.create({
+  first_name: "Jerry",
+  last_name: "Seinfeld",
+  email: "Jerry@seinfeld.com",
+  password_digest: "3jakseha4hr92euif23"
+})
+
+User.create({
+  first_name: "Liz",
+  last_name: "Lemon",
+  email: "Liz@30Rock.com",
+  password_digest: "3jakseha4hr92euif23"
+})
+
+
+## REVIEWS
+
+puts "Re-creating Reviews ..."
+
+Review.destroy_all
+
+Review.create({
+  product_id: Product.first.id,
+  user_id: 1,
+  rating: 5,
+  description: "It's great!"
+})
+
+Review.create({
+  product_id: Product.first.id + 4,
+  user_id: 2,
+  rating: 4,
+  description: "It's good!"
+})
+
+Review.create({
+  product_id: Product.first.id + 5,
+  user_id: 3,
+  rating: 0,
+  description: "It's disgusting!"
+})
+
+Review.create({
+  product_id: Product.first.id + 1,
+  user_id: 3,
+  rating: 2,
+  description: "It's not great!"
+})
 
 puts "DONE!"

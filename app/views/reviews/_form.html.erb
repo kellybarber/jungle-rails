@@ -1,0 +1,13 @@
+<%= form_for([@product, @product.reviews.build]) do |form| %>
+  <p>
+    <%= form.label :rating %>
+    <%= form.select :rating, [['5', 5],['4', 4],['3', 3],['2', 2],['1', 1]] %>
+  </p>
+  <p>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
