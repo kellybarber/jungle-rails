@@ -42,8 +42,10 @@
 
 <% end %>
 
-<h2>Reviews</h2>
-<% @product.reviews.each do |review| %>
-  <%= render 'reviews/review', review: review %>
+<% if @product.reviews.count > 0 %>
+  <h2>Reviews</h2>
+  <% @product.reviews.each do |review| %>
+    <%= render 'reviews/review', review: review %>
+  <% end %>
 <% end %>
 </section>
