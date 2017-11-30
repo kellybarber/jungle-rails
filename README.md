@@ -1,7 +1,20 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built to resemble a project left by a developer midway through.
 
+Functionality added:
+- Product ratings system
+- Product sold-out notification
+- Admin category editing functionality
+- User authentication
+- Added further information to Order Details page
+- Email receipt
+- Fixed 'bug' missing admin security / login to view panel
+- Fixed 'bug' allowing checkout with an empty cart
+
+##
+
+Original code available here: https://github.com/lighthouse-labs/jungle-rails
 
 ## Setup
 
@@ -18,7 +31,6 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
-
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Dependencies
